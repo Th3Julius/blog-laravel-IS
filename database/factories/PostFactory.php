@@ -16,7 +16,7 @@ class PostFactory extends Factory
      */
     public function definition(): array
     {
-        
+
         $faker = \Faker\Factory::create();
         $faker->addProvider(new \Smknstd\FakerPicsumImages\FakerPicsumImagesProvider($faker));
         $name=$this->faker->sentence();
@@ -30,6 +30,6 @@ class PostFactory extends Factory
             'imagen'=>$faker->imageUrl(640,480)
 
         ];
-
     }
+
 }
